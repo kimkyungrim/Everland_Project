@@ -62,7 +62,7 @@ public class Everland {
 			 if(juminDay > thisDay) {
 				 manAge = manAge - 1;	
 			 }
-		 }		
+		 }			 
 
 			/*  ****** 나이에 따라 연령대(DIV) 구분 ******
 			 *  1 : 경로
