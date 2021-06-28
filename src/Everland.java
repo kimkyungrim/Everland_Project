@@ -16,6 +16,7 @@ public class Everland {
 		 String jumin;
 		 String person = null;
 		 String woodae = null;
+		 String ticket = null;
 		 
 		 Everland_util everUtil = new Everland_util();
 		 
@@ -67,11 +68,13 @@ public class Everland {
 	     else if ( manAge >= 3  && manAge < 13 ) div = 4;
 	     else 							         div = 5;
 		 
-		 price  = everUtil.calPrice(preferential, div);
+	     ticket = everUtil.ticketCal(DateOfUse);
+	     person = everUtil.calPerson(div);
+	     price  = everUtil.calPrice(preferential, div);
 		 woodae = everUtil.calPref(preferential);
-		 person = everUtil.calPerson(div);
 		
 	     //저장
+		 saveticket[ordercount] = ticket;
 	     saveage[ordercount] = person;
 	     savecount[ordercount] = ticketCount;
 	     saveprice[ordercount] = price;
@@ -88,7 +91,7 @@ public class Everland {
 		
 		//최종 출력
 		for(int index = 0; index < ordercount; index++) {
-		System.out.printf("A티켓 %s X %d %d %s 적용\n", saveage[index], savecount[index], saveprice[index], savewoodae[index] );
+		System.out.printf("%s %s X %d %d %s 적용\n",saveticket[index],saveage[index], savecount[index], saveprice[index], savewoodae[index] );
 		}
 		System.out.println("=============================================");
 	}
