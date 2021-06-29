@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Everland_util {
+	
 	public String ticketCal(int DateOfUse) {
 		String ticket = null;
 		
@@ -48,8 +49,8 @@ public class Everland_util {
 			}
 				 return ticket;
 	}
-	
-	public int ageCal( int Manage , String jumin) {
+		
+	public int ageCal(int Manage, String jumin) {
 		 
 		 SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
 		 String today = format.format(new Date());
@@ -81,6 +82,16 @@ public class Everland_util {
 		 }		
 		 
 		 return Manage;
+	}
+	
+	public int divCal( int Manage) {
+	     int div = 0;	     
+	     if ( Manage >= 65 )                      div = 1;
+	     else if ( Manage >= 19 && Manage < 65 ) div = 2;
+	     else if ( Manage >= 13 && Manage < 19 ) div = 3;
+	     else if ( Manage >= 3  && Manage < 13 ) div = 4;
+	     else 							          div = 5;
+	     return div;
 	}
 	
 	public int calPrice(int preferential, int div) {
