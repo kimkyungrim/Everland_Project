@@ -7,7 +7,6 @@ public class Everland {
 	
 	public static void main(String[] args) {
 
-		 /* 변수 선언 */
 		 int DateOfUse;
 		 int ticketCount;
 		 int preferential;
@@ -28,7 +27,6 @@ public class Everland {
 		 ArrayList<Integer> saveprice = new ArrayList<Integer>();
 		 ArrayList<String> savewoodae = new ArrayList<String>();
 		 
-		// 스캐너 선언 
 		 Scanner myInput = new Scanner(System.in);
 		 
 		 do {
@@ -50,14 +48,6 @@ public class Everland {
 			  System.out.println("---------------------------------------------");
 	
 		 manAge = everUtil.ageCal(manAge, jumin);	
-		 
-	     /*  ****** DIV 구분 ******
-	      *  1 : 경로
-	      *  2 : 대인
-	      *  3 : 청소년
-	      *  4 : 소인
-	      *  5 : 36 개월 미만
-	      *  **********************  */
 	      
 	     int div = 0;
 	     
@@ -72,7 +62,6 @@ public class Everland {
 	     price  = everUtil.calPrice(preferential, div);
 		 woodae = everUtil.calPref(preferential);
 		
-	     //저장
 		 saveticket.add(ticket);
 	     saveage.add(person);
 	     savecount.add(ticketCount);
@@ -82,14 +71,12 @@ public class Everland {
 		 
 		 myInput.close();
 		 
- 		//최종가격 출력
 		for(int i = 0; i < saveticket.size(); i++) { 	
 		finalPrice += savecount.get(i) *  saveprice.get(i);
  		} 
  		System.out.printf("가격은 %d원 입니다.\n감사합니다.\n", finalPrice);		
 		System.out.println("=============== 에버랜드  ===================");
 		
-		//최종 출력
 		for(int index = 0; index < saveticket.size(); index++) {
 		System.out.printf("%s %s X %d %d %s 적용\n",saveticket.get(index),saveage.get(index), savecount.get(index), saveprice.get(index), savewoodae.get(index));
 		}
