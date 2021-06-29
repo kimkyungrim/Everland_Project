@@ -22,8 +22,6 @@ public class Everland {
 		 
 		 Everland_util everUtil = new Everland_util();
 
-		 //누적변수
-
 		 ArrayList<String> saveage = new ArrayList<String>();
 		 ArrayList<String> saveticket = new ArrayList<String>();
 		 ArrayList<Integer> savecount = new ArrayList<Integer>();
