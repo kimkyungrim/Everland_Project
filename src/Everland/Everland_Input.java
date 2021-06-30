@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Everland_Input {
 	
-	public int DateOfUse, ticketCount, preferential, price = 0, manAge = 0, addorder = 0, div;
+	public int DateOfUse, ticketCount, preferential, price = 0, manAge = 0, addorder = 0, div, isEventCoupon = 0;;
 	public String jumin, person = null, woodae = null, ticket = null;
 	
 	public void inPut() {
@@ -21,12 +21,14 @@ public class Everland_Input {
     
     System.out.println("우대사항을 선택하세요.\n" + "1. 없음\n"+ "2. 장애인\n"+ "3. 국가유공자\n"+ "4. 다자녀\n"+ "5. 임산부" );
     preferential = myInput.nextInt();
+    
+    System.out.println("이벤트쿠폰 여부를 선택하세요.\n" + "1. 있음  2. 없음" );
+    isEventCoupon = myInput.nextInt();
 
     System.out.println("1. 추가구매, 2. 구매종료");
 	addorder = myInput.nextInt();
 	     
 	System.out.println("---------------------------------------------");
-
-	 
+	
 	}
 }

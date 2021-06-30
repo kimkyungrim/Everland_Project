@@ -19,7 +19,7 @@ public class Everland_finalPrint {
 		Ever_Input.price  = everUtil.calPrice(Ever_Input.preferential, Ever_Input.div);
 		Ever_Input.woodae = everUtil.calPref(Ever_Input.preferential);
 
-		everArray.confirmAdd(Ever_Input.ticket, Ever_Input.person, Ever_Input.ticketCount ,Ever_Input.price, Ever_Input.woodae);
+		everArray.confirmAdd(Ever_Input.ticket, Ever_Input.person, Ever_Input.ticketCount ,Ever_Input.price, Ever_Input.woodae, Ever_Input.isEventCoupon);
 		
  		} while(Ever_Input.addorder==1);
 		

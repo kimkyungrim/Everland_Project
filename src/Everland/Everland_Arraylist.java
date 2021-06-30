@@ -4,31 +4,32 @@ import java.util.ArrayList;
 
 public class Everland_Arraylist {
 	
-	 public ArrayList<String> saveage = new ArrayList<String>();
-	 public ArrayList<String> saveticket = new ArrayList<String>();
-	 public ArrayList<Integer> savecount = new ArrayList<Integer>();
-	 public ArrayList<Integer> saveprice = new ArrayList<Integer>();
-	 public ArrayList<String> savewoodae = new ArrayList<String>();
+	public ArrayList<DataClass> arrData = new ArrayList<DataClass>();
 	 
-	 public void confirmAdd(String ticket, String person, int ticketCount , int price, String woodae ) {
-	 saveticket.add(ticket);
-     saveage.add(person);
-     savecount.add(ticketCount);
-     saveprice.add(price);
-     savewoodae.add(woodae);
+	 public void confirmAdd(String ticket, String person, int ticketCount , int price, String woodae, int isEventCoupon ) {
+		 DataClass item = new DataClass();
+		 item.ticket = ticket;
+		 item.ticketCount = ticketCount;
+		 item.price = price;
+         item.person = person;
+         item.woodae = woodae;
+         item.isEventCoupon = isEventCoupon;
+		 arrData.add(item);
 	 }
      
  	public void printData() {
  	 int finalPrice = 0;
-	 for(int i = 0; i < saveticket.size(); i++) {
-		finalPrice += savecount.get(i) *  saveprice.get(i);
+	 for(int i = 0; i < arrData.size(); i++) {
+		finalPrice += arrData.get(i).price *  arrData.get(i).ticketCount;
  		} 
  		System.out.printf("가격은 %d원 입니다.\n감사합니다.\n", finalPrice);		
 		System.out.println("=============== 에버랜드  ===================");
 		
-		for(int index = 0; index < saveticket.size(); index++) {
-		System.out.printf("%s %s X %d %d %s 적용\n",saveticket.get(index),saveage.get(index), savecount.get(index), saveprice.get(index), savewoodae.get(index));
+		for(int index = 0; index < arrData.size(); index++) {
+		System.out.printf("%s %s X %d %d %s 적용\n",arrData.get(index).ticket,arrData.get(index).person, arrData.get(index).ticketCount,
+				arrData.get(index).price, arrData.get(index).woodae,arrData.get(index).isEventCoupon);
 		}
+		
 		System.out.println("=============================================");
  	}
 

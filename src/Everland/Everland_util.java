@@ -6,8 +6,7 @@ import java.util.Date;
 public class Everland_util {
 	
 	public String ticketCal(int DateOfUse) {
-		String ticket = null;
-		
+		String ticket = null;	
 		if(DateOfUse == 20210904 || DateOfUse == 20210905 || DateOfUse == 20210911 || DateOfUse == 20210912 || DateOfUse == 20210918
 				 || DateOfUse == 20210919 || DateOfUse == 20210920 || DateOfUse == 20210921 || DateOfUse == 20210922 || DateOfUse == 20210925
 				 || DateOfUse == 20210926 || DateOfUse == 20211002 || DateOfUse == 20211003 || DateOfUse == 20211009 || DateOfUse == 20211010
